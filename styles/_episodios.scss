@@ -1,0 +1,89 @@
+@import '../styles/_variables';
+
+.podcast{
+    background-image: linear-gradient(to right, $gradiente_poly1, $gradiente_poly2);
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+    height:1042px;
+    width:100%;
+
+    h2{
+        font-family: 'IBM Plex Sans';
+        margin-top: 186px;
+        margin-left: 200px;
+        font-size: 48px;
+        color: $blanco;
+    }
+    .episodios{
+        padding-top:30px;
+        width:100%;
+
+        .podcasts{
+            display: grid;
+            margin-left: 100px;
+            margin-right: 100px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 72px;
+            grid-row-gap: 72px;  
+            transition: all 1s ease-in-out;  
+            .ifc{
+                width: 100%;
+                height: 232px; 
+                border: 0;  
+            }
+           .pod1{
+                grid-area: 1 / 1 / 2 / 2;
+            }
+           .pod2{
+                grid-area: 1 / 2 / 2 / 3;
+            }
+           .pod3{
+                grid-area: 2 / 1 / 3 / 2;
+            }
+           .pod4{
+                grid-area: 2 / 2 / 3 / 3;
+            }
+        }
+    }
+}
+
+@media (max-width: $ancho_max_desktop){
+    .podcast{
+        height:1203.5px;
+        clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%); 
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        h2{
+            margin-top: 64px;
+            margin-left: 16px;
+            font-size: 36px;
+        }
+        .episodios{
+            padding-top: 0;
+            .podcasts{
+                margin-top: 21px;
+                margin-left: 11px;
+                margin-right: 11px;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(4, 1fr);
+                grid-column-gap: 11px;
+                grid-row-gap: 11px;  
+                transition: all 1s ease-in-out;
+                .pod1{
+                    grid-area: 1 / 1 / 2 / 2; 
+                }
+                .pod2{
+                    grid-area: 2 / 1 / 3 / 2;
+                }
+                .pod3{
+                    grid-area: 3 / 1 / 4 / 2;
+                }
+                .pod4{
+                    grid-area: 4 / 1 / 5 / 2;
+                }
+            }
+        }
+    }
+}

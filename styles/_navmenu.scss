@@ -1,0 +1,150 @@
+@import '../styles/variables';
+
+.nav_menu{                                         
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-wrap: nowrap;
+    .logo{                                        
+        padding: 22px 0px 22px 100px;
+        height: 36px;
+        width: 36px;
+        flex-wrap: nowrap;
+        &:hover{
+            transition: transform 0.2s ease-in-out;
+            transform: translateY(3px);
+            opacity: 0.8;
+            }    
+    }
+    .menu_responsive{
+        width: 100%;
+        background-color: white;
+        display: flex;
+        #boton_menu{
+            display: none;                               
+        }
+        .cruz {                                    
+            opacity: 0;
+            position: absolute;
+          }
+        .bars{                                    
+            opacity: 0;
+        }
+        .menu{
+            width: 100%;
+            height: 80px;
+            display: flex;
+            flex-direction: row-reverse;
+            opacity: 1;
+            ul{
+                list-style: none;
+                display: flex; 
+                li{
+                    padding-top: 26px;
+                    padding-right: 48px;
+                    height: 28px;   
+                        a{
+                            width: auto;
+                            font-family: 'IBM Plex Mono', monospace;
+                            color: #060A24;
+                            font-size: 16px;
+                            background-color: white;
+                            text-decoration: none;
+                        }
+                        a:hover{                      
+                            Font-family: 'IBM Plex Mono', medium;
+                            font-size: 16px;
+                            color: $turquesa;
+                            letter-spacing: 0;
+                            text-decoration: line-through;
+                        }
+                        a:active{                     
+                            font-family: 'IBM Plex Mono', monospace;
+                            font-size: 16px;
+                            color: $color_texto_activo;
+                            letter-spacing: 0;
+                        }
+                    }
+                }	
+            }
+
+        }
+    }
+
+@media (max-width: $ancho_max_desktop){
+    .nav_menu{                                       
+        width: 100%;
+        height: 44px;        
+        .logo{
+            padding: 10px 0px 10px 16px;
+            height: 24px;
+            width: 24px;
+        }
+        .menu_responsive{
+            flex-direction: row-reverse;
+            label{                                     
+                display: block;
+            }
+            .bars{
+                opacity: 1;
+                align-self: center;
+                i{
+                    margin-right: 12px;
+                    height: 14px;
+                    width: 14px;
+                }
+            }
+            .cruz{
+                opacity: 0;
+                align-self: center;
+                right: 12px;
+                i{
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+            .menu{                                          
+                width: 100%;
+                height: 80px;
+                position: absolute;
+                top: 44px;
+                opacity: 0;                                 
+                                        
+        
+                ul{
+                    width: 100%;
+                    height: 224px;
+                    flex-direction: column;
+                    li{
+                        background-color: $color_menu;
+                        padding-left: 16px;
+                        padding-top: 16px;
+                        padding-bottom: 24px;
+                        a{
+                            color: #ffffff;
+                            font-size: 16px;
+                            background-color: $color_menu;
+                            text-decoration: none;
+                            padding: 16px 16px auto 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #boton_menu:checked ~ .menu{              
+        display: block;
+        position: absolute;
+        margin-top: 0px;
+        opacity: 1;
+        transition: all 0.5s ease-in-out;     
+    }
+    #boton_menu:checked ~ .bars{               
+        opacity: 0;                          
+        transition: opacity 0.5s linear;    
+    }
+    #boton_menu:checked ~ .cruz{               
+        opacity: 1;                            
+        transition: opacity 0.5s linear;
+    }
+}

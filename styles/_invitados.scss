@@ -1,0 +1,93 @@
+@import '../styles/_variables';
+
+.invitados{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+      h3{
+        font-family: 'IBM Plex Sans';
+        font-size: 48px;
+        padding-bottom: 14px;
+        padding-left: 14%;
+        }
+      
+    .pics{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50% 50%;
+    //background-color: brown;             /*Esto esta puesto para evidenciar un pading entre fotos*/  
+        img{
+        width: 100%;
+        }
+        .pic1{
+        grid-area: 1 / 1 ;
+        }
+        .pic2{
+        grid-area: 1 / 2;
+        }
+        .pic3{
+        grid-area: 1 / 3;
+        }
+        .pic4{
+        margin-top: -5px;
+        grid-area: 2 / 1 ;
+        }
+        .pic5{
+        margin-top: -5px;
+        grid-area: 2 / 2;
+        }
+        .pic6{
+        margin-top: -5px;    
+        grid-area: 2 / 3;
+        }
+    }
+}
+
+@media (max-width: $ancho_max_desktop){
+    .invitados{
+        flex-wrap: nowrap;
+        width: 100%;
+        
+            h3{
+                font-family: 'IBM Plex Sans';
+                font-size: 36px;
+                padding-bottom: 14px;
+                padding-left: 14%;
+                padding-top: 54px;
+            }
+         
+        .pics{
+            display: grid;
+            grid-template-columns: repeat(1, auto);
+            grid-template-rows: repeat(6, auto);
+            text-align: center; 
+            img{
+            width: 100%;
+            }  
+                .pic1{
+                    grid-area: 1 / 1;
+                }
+                .pic2{
+                    margin-top: -5px;
+                    grid-area: 2 / 1;
+                }
+                .pic3{
+                    margin-top: -5px;
+                    grid-area: 3 / 1;
+                }
+                .pic4{
+                    margin-top: -5px;
+                    grid-area: 4 / 1;
+                }
+                .pic5{
+                    margin-top: -5px;
+                    grid-area: 5 / 1;
+                }
+                .pic6{
+                    margin-top: -5px;
+                    grid-area: 6 / 1;
+                } 
+            }
+        }
+    }

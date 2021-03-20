@@ -1,0 +1,71 @@
+@import '../styles/_variables';
+
+.footer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;  
+    .text{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        p{
+            Font-family: 'IBM Plex Mono';
+            font-size: 16px;
+            margin-bottom: 36px;
+            color: $texto_desktop;
+            padding-left: 100px;
+            margin-top: 36px;
+            line-height: 28px;
+        }
+    }
+    .iconos{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        a{
+            font-size: 18px;
+            padding-right: 36px;
+            margin-top: 36px;
+            color: $texto_desktop;
+            line-height: 28px;
+        }
+        a:last-child{
+            padding-right: 100px;
+        }
+    }
+} 
+ 
+@media (max-width: $ancho_max_desktop){
+    .footer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;   
+        .text{
+            width: 100%;
+            padding-left: 0;
+            display: flex;
+            justify-content: center;
+            margin-left: -70px;
+            p{
+                font-size: 14px;
+                margin-top: 36px;
+                margin-bottom: 16px;
+                line-height: 22px;
+            }
+        }
+        .iconos{
+            width: 100%;
+            line-height: 28px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 31px;
+            margin-right:38px;
+            a:last-child{
+            padding-right: 45px;
+            }
+        }
+    }
+}

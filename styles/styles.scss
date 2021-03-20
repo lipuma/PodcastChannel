@@ -1,0 +1,36 @@
+@import '../styles/_variables';
+@import '../styles/_navmenu.scss';
+@import '../styles/_header.scss';
+@import '../styles/_episodios.scss';
+@import '../styles/_nosotros.scss';
+@import '../styles/_invitados.scss';
+@import '../styles/_topicos.scss';
+@import '../styles/_novedades.scss';
+@import '../styles/_footer.scss';
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;  /*Scroll*/     
+}
+
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+
